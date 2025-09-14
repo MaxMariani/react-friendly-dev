@@ -1,6 +1,13 @@
+import type React from 'react';
 import { Link } from 'react-router';
 
-const Hero = ({
+
+type HeroProps = {
+  name?: string,
+  text?: string
+}
+
+const Hero : React.FC<HeroProps> = ({
   name = 'Max',
   text = ' I build friendly web experiences and help others become confident, modern developers.',
 }) => {
